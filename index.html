@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js"> <!--<![endif]-->
+  <head lang="en-US">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title></title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+  </head>
+
+
+  <body>
+    <!--[if lt IE 7]>
+      <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+
+    <div id="app-wrapper" class="container">
+
+      <h1 class="app-title">What's in the Fridge?</h1>
+
+      <div id="view-swap">
+        <button class="simple-button active">Ingredients</button>
+        <span>|</span>
+        <button class="simple-button">Recipes</button>
+      </div><!-- #view-swap -->
+
+
+      <div id="app-contents" class="container">
+
+        <section class="content-view active view-ingredients">
+
+          <div class="ingredient-card">
+
+            <input class="ingredient-category" type="text" value="spices">
+
+
+            <table>
+              <thead>
+                <th>Type</th>
+                <th>Qty</th>
+                <th></th>
+                <th></th>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td>input</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+
+          </div>
+
+        </section><!-- .view-ingredients -->
+
+
+        <section class="content-view view-recipes">
+
+          Recipes
+
+        </section><!-- .view-ingredients -->
+
+      </div><!-- #app-contents -->
+
+    </div><!-- #app-wrapper -->
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ember.js/1.0.0-rc.3/ember.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0-rc.3/handlebars.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/garlic.js/1.2.0/garlic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/parsley.js/1.1.10/parsley.min.js"></script>
+
+    <script src="js/main.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,61 @@
+
+// ========== CUSTOM MIXINS ========== //
+@mixin box-sizing($size: border-box) {
+  -webkit-box-sizing: $size;
+  -moz-box-sizing: $size;
+  -ms-box-sizing: $size;
+  box-sizing: $size;
+}
+
+@mixin box-shadow($props) {
+  -webkit-box-shadow: $props;
+  box-shadow: $props;
+}
+
+@mixin font-smoothing($smoothing: "subpixel-antialiased") {
+  -webkit-font-smoothing: $smoothing;
+  font-smoothing: $smoothing;
+}
+
+
+@mixin text-size-adjust($adjust: 100%) {
+  -ms-text-size-adjust: $adjust;
+  -webkit-text-size-adjust: $adjust;
+  text-size-adjust: $adjust;
+}
+
+@mixin linear-gradient($origin: top, $start: $white 0%, $end: $black $full-size) {
+  background-image: -webkit-linear-gradient($origin, $start, $end);
+  background-image: -moz-linear-gradient($origin, $start, $end);
+  background-image: -o-linear-gradient($origin, $start, $end);
+  background-image: -ms-linear-gradient($origin, $start, $end);
+  background-image: linear-gradient($origin, $start, $end);
+}
+
+@mixin transition($atts: all, $time: 0.3s, $easing: linear) {
+  -webkit-transition: $atts $time $easing;
+  -moz-transition: $atts $time $easing;
+  -o-transition: $atts $time $easing;
+  -ms-transition: $atts $time $easing;
+  transition: $atts $time $easing;
+}
+
+
+@mixin grid-unit($span) {
+  float: left;
+  margin-right: $gutter-width;
+  width: ($column-width * $span) + ($gutter-width * ($span - 1));
+}
+
+
+@mixin divide-by($value) {
+  width: $full-size / $value;
+}
+
+
+@mixin placeholder($color: $light-gray, $font-style: normal, $font-weight: normal) {
+  ::-webkit-input-placeholder { color: $color; font-style: $font-style; font-weight: $font-weight; }
+  :-moz-placeholder           { color: $color; font-style: $font-style; font-weight: $font-weight; }
+  ::-moz-placeholder          { color: $color; font-style: $font-style; font-weight: $font-weight; }
+  :-ms-input-placeholder      { color: $color; font-style: $font-style; font-weight: $font-weight; }
+}

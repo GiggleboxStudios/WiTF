@@ -1,0 +1,128 @@
+@import "_config";
+@import "_mixins";
+@import "_normalize";
+@import "_ui";
+@import "_typography";
+
+
+
+
+// ==============================
+//  BASELINE LAYOUT COMPONENTS
+// ==============================
+.container {
+  width: $full-size;
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+.clear, .clr {
+  display: block;
+  width: auto;
+  clear: both;
+  float: none;
+
+  &:before{
+    clear: left;
+  }
+
+  &:after {
+    clear: right;
+  }
+}
+
+
+// ==============================
+//  APPLICATION WRAPPER STYLES
+// ==============================
+#app-wrapper {
+
+}
+
+
+// ==============================
+//  APPLICATION TITLE STYLES
+// ==============================
+.app-title {
+  text-align: center;
+  font-weight: $light;
+  font-size: 4rem;
+  line-height: 4rem;
+}
+
+
+
+// ==============================
+//  #view-swap BUTTON STYLES
+// ==============================
+#view-swap {
+  color: $gray;
+  text-align: center;
+  font-size: 2rem;
+  line-height: 2rem;
+
+  button {
+    font-size: inherit;
+    line-height: inherit;
+  }
+}
+
+
+
+.content-view {
+  @include transition;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  padding: 16rem 0 0;
+  width: $full-size;
+  height: $full-size;
+  color: $gray;
+  opacity: 0;
+
+
+
+  &.active {
+    z-index: 100;
+    opacity: 1;
+  }
+
+}
+
+
+//
+//  APP FOOTER CONTENT
+//
+.copyright {
+  position: fixed;
+  bottom: 0;
+  z-index: 1500;
+  display: block;
+  padding: 1.5rem 0;
+  width: $full-size;
+  background: $black;
+  color: $white;
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+
+  a {
+    color: $white;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  span {
+    display: inline-block;
+    padding: 0.5rem;
+  }
+}
+
+
+// COMPONENT INCLUDES
+@import "_cards";
+
+@import "_ingredients";
+@import "_recipes";

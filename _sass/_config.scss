@@ -1,0 +1,134 @@
+
+// Colors Definitions
+$white:                 #fff;
+  $off-white:           #f3f3f3;
+
+$gray:                  #999;
+  $light-gray:          #e3e3e3;
+
+$black:                 #353535;
+
+$red:                   #db4e4e;
+  $dark-red:            #be3333;
+
+
+$text-color:            $black;
+$body-bg:               $white;
+
+$link-color:            $red;
+$link-hover-color:      $red;
+$link-active-color:     $white;
+$link-visited-color:    $red;
+
+$link-bg:               $off-white;
+$link-hover-bg:         $red;
+$link-active-bg:        $dark-red;
+
+$border-color:          $off-white;
+
+
+$trans-black:           rgba(0,0,0,0.3);
+
+$trans:            transparent;
+
+
+// $blue:              #6ca0c8;
+//   $light-blue:      #b5cfe3;
+//   $dark-blue:       #2e77b0;
+
+// $orange:            #e9b545;
+//   $light-orange:    #f0cb7c;
+//   $dark-orange:     #d9a330;
+
+// $purple:            #ae84c2;
+//   $light-purple:    #c6a9d4;
+//   $dark-purple:     #9166a5;
+
+
+
+// MAX TEMPLATE WIDTH
+$max-width:        96rem;
+
+$border-radius:    0.3rem;
+
+// ========== IMAGE DIRECTORIES ========== //
+
+@mixin app($imgname)   { background-image: url('#{$images}socialstore/#{$imgname}'); }
+
+
+
+// ========== FONTS ========== //
+$fonts: 'fonts/';
+
+@mixin fontface($font-alias, $file-name, $fontweight: normal, $fontstyle: normal) {
+  @font-face {
+    font-family: '#{$font-alias}';
+    src: url('#{$fonts}#{$font-alias}/#{$file-name}.eot');
+    src: url('#{$fonts}#{$font-alias}/#{$file-name}.eot?#iefix') format('embedded-opentype'),
+         url('#{$fonts}#{$font-alias}/#{$file-name}.svg') format('svg'),
+         url('#{$fonts}#{$font-alias}/#{$file-name}.ttf') format('truetype');
+    font-weight: $fontweight;
+    font-style: $fontstyle;
+  }
+}
+
+// @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic,400italic,600italic|Source+Code+Pro:400,600);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600);
+
+// ----- $FONT-FACE HERE ----- //
+// .fontface('fontalias', '-webfont', normal, normal);
+
+
+// ----- FONT ALIASES ----- //
+$sans:      'Source Sans Pro', sans-serif;
+$mono:      monospace;
+
+// $sans:      'Droid Sans', sans-serif;
+// $mono:      'Droid Sans Mono', monospace;
+
+
+$light:     200;
+$normal:    400;
+$bold:      600;
+
+
+// ========== Layout dimensions ========== //
+//
+// You may need to wrap each equation with floor()
+// if you're using raw pixel values.
+//
+// Use percentages for maximum flexibility
+//
+$full-size: 100%;
+
+
+
+$_1_2:       $full-size   / 2;
+
+$_1_3:       $full-size   / 3;
+$_2_3:       $_1_3        * 2;
+
+$_1_4:       $full-size   / 4;
+$_3_4:       $_1_4        * 3;
+
+$_1_5:       $full-size   / 5;
+$_2_5:       $_1_5        * 2;
+$_3_5:       $_1_5        * 3;
+$_4_5:       $_1_5        * 4;
+
+$_1_6:       $full-size   / 6;
+$_5_6:       $_1_6        * 5;
+
+$_1_7:       $full-size   / 7;
+$_2_7:       $_1_7        * 2;
+$_3_7:       $_1_7        * 3;
+$_4_7:       $_1_7        * 4;
+$_5_7:       $_1_7        * 5;
+$_6_7:       $_1_7        * 6;
+
+$_1_8:       $full-size   / 8;
+$_3_8:       $_1_8        * 3;
+$_5_8:       $_1_8        * 5;
+$_7_8:       $_1_8        * 7;
+
+

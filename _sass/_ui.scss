@@ -1,0 +1,239 @@
+
+/** ======================== **/
+/**  UI DEFAULT STYLES       **/
+/** ======================== **/
+
+// Link Default styles
+a {
+  color: $red;
+  text-decoration: none;
+
+  &:visited {
+    border-color: $red;
+    color: $red;
+    text-decoration: none;
+  }
+
+  &:visited:hover {
+    color: $dark-red;
+    text-decoration: underline;
+  }
+
+  &:hover {
+    color: $dark-red;
+    text-decoration: underline;
+  }
+
+  &:active {
+    color: $dark-red;
+    text-decoration: underline;
+  }
+
+
+  // SUBTLE LINKS
+  &.subtle-link {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &.subtle-link:visited {
+    color: $gray;
+  }
+
+  &.subtle-link:visited:hover,
+  &.subtle-link:hover {
+    text-decoration: underline;
+  }
+
+}
+
+
+//==============================
+// <button> Styles
+//==============================
+button {
+  @include transition;
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  border: 0;
+  border-radius: $border-radius;
+  background: lighten($off-white, 10%);
+  color: $dark-red;
+  font-family: inherit;
+
+  &:hover {
+    @include transition;
+    background: $red;
+    color: $white;
+  }
+
+  &:active {
+    background: $dark-red;
+    color: $white;
+  }
+
+  &.simple-button {
+    background: $trans;
+    color: $gray;
+
+    &.active {
+      color: $black;
+    }
+
+    &:hover {
+      color: $red;
+    }
+  }
+}
+
+button[disabled] {
+  background: $off-white;
+  color: $gray;
+}
+
+
+
+label, input, textarea, select {
+  position: relative;
+  display: inline-block;
+  margin: 0;
+}
+
+
+//==============================
+// FORM LABEL STYLES
+//==============================
+label {
+  position: relative;
+  padding: 0.6rem 1.5rem 0.6rem 0;
+  color: $gray;
+  text-align: right;
+  font-family: inherit;
+}
+
+
+//==============================
+// INPUT SPECIFIC FIELDS
+//==============================
+input, textarea, select {
+  @include transition;
+  padding: 0.5rem 1rem;
+  border: 1px solid $trans;
+  border-radius: $border-radius;
+  color: $red;
+
+  &:hover {
+    @include transition;
+    @include box-shadow(0 0 5px $off-white);
+  }
+
+  &:focus {
+    @include transition;
+    outline: 0;
+    @include box-shadow(0 0 5px $gray);
+  }
+
+  &.simple {
+    &:hover {
+      @include box-shadow(none);
+    }
+
+    &:focus {
+      outline: 0;
+      @include box-shadow(none);
+    }
+  }
+}
+
+
+select {
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  border: $trans;
+  border-radius: 0;
+}
+
+
+@include placeholder($gray, normal, $light);
+
+
+
+//==============================
+// Data card default styles
+//==============================
+.card-data {
+  padding: 10px;
+
+
+  .card-inner {
+    @include box-shadow(0 0 5px $trans-black);
+
+  }
+
+  .cart-title {
+    width: $full-size;
+    @include box-shadow(none);
+  }
+
+}
+
+
+
+
+
+//==============================
+// Scroll plugin styles
+//==============================
+.nano {
+  position: relative;
+  overflow: hidden;
+  width: $full-size;
+  height: $full-size;
+
+  .content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: scroll;
+    overflow-x: hidden;
+
+    &:focus {
+      outline: thin dotted;
+    }
+
+    &::-webkit-scrollbar {
+      visibility: hidden;
+    }
+  }
+
+  .has-scrollbar .content::-webkit-scrollbar {
+    visibility: visible;
+  }
+
+  > .pane {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    visibility: hidden\9; /* Target only IE7 and IE8 with this hack */
+    width: 10px;
+    border-radius: 5px;
+    background: rgba(0,0,0,0.25);
+    opacity: 0.01;
+  }
+
+  > .pane > .slider {
+    position: relative;
+    margin: 0 1px;
+    border-radius: 0.3rem;
+    background: $gray;
+    background: rgba(0,0,0,.5);
+  }
+
+  &:hover > .pane, .pane.active, .pane.flashed {
+    visibility : visible\9; /* Target only IE7 and IE8 with this hack */
+    opacity    : 0.99;
+  }
+}

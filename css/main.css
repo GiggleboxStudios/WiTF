@@ -1,0 +1,492 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,600);
+/** ======================== **/
+/**  NORMALIZE CSS           **/
+/** ======================== **/
+article, aside, details,
+figcaption, figure, footer,
+header, main, nav,
+section, summary {
+  display: block; }
+
+audio,
+canvas,
+video {
+  display: inline-block; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden] {
+  display: none; }
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  font-size: 62.5%;
+  font-family: "Source Sans Pro", sans-serif; }
+
+body {
+  -webkit-font-smoothing: "subpixel-antialiased";
+  font-smoothing: "subpixel-antialiased";
+  margin: 0;
+  height: 100%;
+  background: white;
+  background: white;
+  color: #353535;
+  font-size: 1em;
+  font-family: "Source Sans Pro", sans-serif; }
+  body, body * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:active,
+a:hover {
+  outline: 0; }
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b,
+strong {
+  font-weight: bold; }
+
+dfn {
+  font-style: italic; }
+
+hr {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 0; }
+
+mark {
+  background: #ff0;
+  color: #353535; }
+
+code,
+kbd,
+pre,
+samp {
+  font-size: 1em;
+  font-family: monospace, serif; }
+
+pre {
+  white-space: pre-wrap; }
+
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019"; }
+
+small {
+  font-size: 80%; }
+
+sub,
+sup {
+  position: relative;
+  vertical-align: baseline;
+  font-size: 75%;
+  line-height: 0; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+figure {
+  margin: 0; }
+
+fieldset {
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+  border: 1px solid #c0c0c0; }
+
+legend {
+  border: 0;
+  padding: 0; }
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  font-size: 100%;
+  font-family: inherit; }
+
+button,
+input {
+  line-height: normal; }
+
+button,
+select {
+  text-transform: none; }
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0; }
+
+input[type="search"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: textfield; }
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse; }
+
+/** ======================== **/
+/**  UI DEFAULT STYLES       **/
+/** ======================== **/
+a {
+  color: #db4e4e;
+  text-decoration: none; }
+  a:visited {
+    border-color: #db4e4e;
+    color: #db4e4e;
+    text-decoration: none; }
+  a:visited:hover {
+    color: #be3333;
+    text-decoration: underline; }
+  a:hover {
+    color: #be3333;
+    text-decoration: underline; }
+  a:active {
+    color: #be3333;
+    text-decoration: underline; }
+  a.subtle-link {
+    color: inherit;
+    text-decoration: none; }
+  a.subtle-link:visited {
+    color: #999999; }
+  a.subtle-link:visited:hover, a.subtle-link:hover {
+    text-decoration: underline; }
+
+button {
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  border: 0;
+  border-radius: 0.3rem;
+  background: white;
+  color: #be3333;
+  font-family: inherit; }
+  button:hover {
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    background: #db4e4e;
+    color: white; }
+  button:active {
+    background: #be3333;
+    color: white; }
+  button.simple-button {
+    background: transparent;
+    color: #999999; }
+    button.simple-button.active {
+      color: #353535; }
+    button.simple-button:hover {
+      color: #db4e4e; }
+
+button[disabled] {
+  background: #f3f3f3;
+  color: #999999; }
+
+label, input, textarea, select {
+  position: relative;
+  display: inline-block;
+  margin: 0; }
+
+label {
+  position: relative;
+  padding: 0.6rem 1.5rem 0.6rem 0;
+  color: #999999;
+  text-align: right;
+  font-family: inherit; }
+
+input, textarea, select {
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  padding: 0.5rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.3rem;
+  color: #db4e4e; }
+  input:hover, textarea:hover, select:hover {
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    -webkit-box-shadow: 0 0 5px #f3f3f3;
+    box-shadow: 0 0 5px #f3f3f3; }
+  input:focus, textarea:focus, select:focus {
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    outline: 0;
+    -webkit-box-shadow: 0 0 5px #999999;
+    box-shadow: 0 0 5px #999999; }
+  input.simple:hover, textarea.simple:hover, select.simple:hover {
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+  input.simple:focus, textarea.simple:focus, select.simple:focus {
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+
+select {
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  border: transparent;
+  border-radius: 0; }
+
+::-webkit-input-placeholder {
+  color: #999999;
+  font-style: normal;
+  font-weight: 200; }
+
+:-moz-placeholder {
+  color: #999999;
+  font-style: normal;
+  font-weight: 200; }
+
+::-moz-placeholder {
+  color: #999999;
+  font-style: normal;
+  font-weight: 200; }
+
+:-ms-input-placeholder {
+  color: #999999;
+  font-style: normal;
+  font-weight: 200; }
+
+.card-data {
+  padding: 10px; }
+  .card-data .card-inner {
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); }
+  .card-data .cart-title {
+    width: 100%;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
+
+.nano {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%; }
+  .nano .content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: scroll;
+    overflow-x: hidden; }
+    .nano .content:focus {
+      outline: thin dotted; }
+    .nano .content::-webkit-scrollbar {
+      visibility: hidden; }
+  .nano .has-scrollbar .content::-webkit-scrollbar {
+    visibility: visible; }
+  .nano > .pane {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    visibility: hidden\9;
+    /* Target only IE7 and IE8 with this hack */
+    width: 10px;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.25);
+    opacity: 0.01; }
+  .nano > .pane > .slider {
+    position: relative;
+    margin: 0 1px;
+    border-radius: 0.3rem;
+    background: #999999;
+    background: rgba(0, 0, 0, 0.5); }
+  .nano:hover > .pane, .nano .pane.active, .nano .pane.flashed {
+    visibility: visible\9;
+    /* Target only IE7 and IE8 with this hack */
+    opacity: 0.99; }
+
+/** ======================== **/
+/**  BASE TYPOGRAPHY STYLES  **/
+/** ======================== **/
+hr {
+  display: block;
+  clear: both;
+  margin: 3rem 0;
+  padding: 0;
+  width: 100%;
+  height: 0.3rem;
+  border: 0;
+  background-color: #f3f3f3;
+  font-size: 0; }
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: inherit;
+  display: block; }
+
+p {
+  margin: 3rem 0; }
+  p code {
+    color: #999999;
+    font-size: 1.6rem;
+    background: #f3f3f3;
+    border-radius: 0.3rem;
+    padding: 0.3rem 0.8rem; }
+
+.container {
+  width: 100%;
+  max-width: 96rem;
+  margin: 0 auto; }
+
+.clear, .clr {
+  display: block;
+  width: auto;
+  clear: both;
+  float: none; }
+  .clear:before, .clr:before {
+    clear: left; }
+  .clear:after, .clr:after {
+    clear: right; }
+
+.app-title {
+  text-align: center;
+  font-weight: 200;
+  font-size: 4rem;
+  line-height: 4rem; }
+
+#view-swap {
+  color: #999999;
+  text-align: center;
+  font-size: 2rem;
+  line-height: 2rem; }
+  #view-swap button {
+    font-size: inherit;
+    line-height: inherit; }
+
+.content-view {
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  padding: 16rem 0 0;
+  width: 100%;
+  height: 100%;
+  color: #999999;
+  opacity: 0; }
+  .content-view.active {
+    z-index: 100;
+    opacity: 1; }
+
+.copyright {
+  position: fixed;
+  bottom: 0;
+  z-index: 1500;
+  display: block;
+  padding: 1.5rem 0;
+  width: 100%;
+  background: #353535;
+  color: white;
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 1.6rem; }
+  .copyright a {
+    color: white; }
+    .copyright a:hover {
+      color: white; }
+  .copyright span {
+    display: inline-block;
+    padding: 0.5rem; }
+
+.ingredient-card {
+  width: 33.33333%;
+  float: left;
+  max-width: 45rem;
+  font-size: 1.4rem; }
+
+.card-title {
+  padding: 1.5rem;
+  width: 100%;
+  color: #353535;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  line-height: 1.4rem; }
+
+.ingredient-row button, .ingredient-row input {
+  background: transparent; }
+.ingredient-row:nth-child(odd) {
+  background: #f3f3f3; }
+
+input.item-name {
+  color: #353535;
+  text-transform: capitalize; }
+
+input.item-qty {
+  width: 3rem; }

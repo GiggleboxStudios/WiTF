@@ -1,0 +1,45 @@
+
+
+.ingredient-card {
+  @include divide-by(3);
+  float: left;
+  max-width: 45rem;
+  font-size: 1.4rem;
+}
+
+  // Card Titles
+  .card-title {
+    padding: 1.5rem;
+    width: $full-size;
+    color: $black;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+  }
+
+
+  // Ingredient rows
+  .ingredient-row {
+
+    button, input {
+      background: $trans;
+    }
+
+    &:nth-child(odd) {
+      background: $off-white;
+    }
+  }
+
+
+  // Card inputs
+  input.item-name {
+    color: $black;
+
+    text-transform: capitalize;
+  }
+
+  input.item-qty {
+    width: 3rem;
+  }
+
